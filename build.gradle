@@ -1,0 +1,57 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+}
+//// En Main > Edit configurations > Application > Main > VM posar:
+//  -p ../../../javafx-sdk/lib --add-modules javafx.controls,javafx.fxml
+group 'Sergio.Garcia'
+version '1.0'
+
+sourceCompatibility = JavaVersion.VERSION_11
+
+javafx {
+    version = "11"
+    modules = ['javafx.controls', 'javafx.fxml']
+}
+
+
+sourceSets {
+    main {
+        resources {
+            srcDirs = ["src/main/java"]
+            includes = ["**/*.fxml"]
+        }
+    }
+}
+
+
+mainClassName = "pkgPrincipal.Main"
+
+jar {
+    manifest {
+        attributes "Main-Class": "pkgPrincipal.Main"
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+repositories {
+    //mavenLocal()
+    maven {
+        // url myMavenRepoReadUrl
+        url "https://mymavenrepo.com/repo/tCPo3iIraOyBkNuUVbIS/"
+        credentials {
+            username 'myMavenRepo'
+            password '123'
+        }
+    }
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile('Sergio.Garcia:FitxersV2:1.0') { changing = true }
+
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="216.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="formularis.principal.FInformacio">
+
+
+    <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="299.0" prefWidth="227.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="7.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../fitxers/aboutus.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="17.0" layoutY="172.0" text="DAM 1 Eugeni Corporated">
+               <font>
+                  <Font name="FreeMono Oblique" size="13.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="HLWeb" layoutX="89.0" layoutY="201.0" onAction="#BtObriWeb" text="web" />
+            <Button fx:id="BOk" layoutX="89.0" layoutY="258.0" mnemonicParsing="false" onAction="#BtOk" text="Ok" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>

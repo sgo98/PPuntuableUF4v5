@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="305.0" prefWidth="311.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="formularis.principal.FPrincipal">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="299.0" prefWidth="297.0">
+         <children>
+            <ImageView fitHeight="262.0" fitWidth="275.0" layoutX="21.0" layoutY="29.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../../../fitxers/biblioteca.jpeg" />
+               </image>
+            </ImageView>
+            <MenuBar layoutX="21.0" prefHeight="29.0" prefWidth="275.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Llibres">
+                  <items>
+                    <MenuItem fx:id="MIAfegirLlibres" mnemonicParsing="false" onAction="#BTAfegirLlibres" text="Afegir Llibres" />
+                        <MenuItem fx:id="MIMostrarLlibres" mnemonicParsing="false" onAction="#BTLlistarLlibres" text="Mostrar Llibres" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Autors">
+                  <items>
+                    <MenuItem fx:id="MIAfegirAutors" mnemonicParsing="false" onAction="#BTAfegirAutors" text="Afegir Autors" />
+                        <MenuItem fx:id="MIMostrarAutors" mnemonicParsing="false" onAction="#BTLlistarAutors" text="Mostrar Autors" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Sobre ...">
+                  <items>
+                    <MenuItem fx:id="MIInformacio" mnemonicParsing="false" onAction="#BTInformacio" text="Informació" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
