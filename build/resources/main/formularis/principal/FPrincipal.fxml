@@ -19,12 +19,14 @@
                   <items>
                     <MenuItem fx:id="MIAfegirLlibres" mnemonicParsing="false" onAction="#BTAfegirLlibres" text="Afegir Llibres" />
                         <MenuItem fx:id="MIMostrarLlibres" mnemonicParsing="false" onAction="#BTLlistarLlibres" text="Mostrar Llibres" />
+                        <MenuItem fx:id="MIEliminarLlibres" mnemonicParsing="false" onAction="#BTEliminarLlibres" text="Eliminar Llibres" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Autors">
                   <items>
                     <MenuItem fx:id="MIAfegirAutors" mnemonicParsing="false" onAction="#BTAfegirAutors" text="Afegir Autors" />
                         <MenuItem fx:id="MIMostrarAutors" mnemonicParsing="false" onAction="#BTLlistarAutors" text="Mostrar Autors" />
+                        <MenuItem fx:id="MIEliminarAutors" mnemonicParsing="false" onAction="#BTEliminarAutors" text="Eliminar Autors" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Sobre ...">

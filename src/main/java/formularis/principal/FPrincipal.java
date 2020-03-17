@@ -22,6 +22,10 @@ public class FPrincipal {
     private MenuItem MIMostrarAutors;
     @FXML
     private MenuItem MIInformacio;
+    @FXML
+    private MenuItem MIEliminarAutors;
+    @FXML
+    private MenuItem MIEliminarLlibres;
 
 
     //</editor-fold>
@@ -75,6 +79,15 @@ public class FPrincipal {
     public void BTLlistarAutors() {
         FGeneric("../autors/FMostrarAutors.fxml", "Llistar autors");
     }
+    @FXML
+    public void BTEliminarAutors() {
+        FGeneric("../autors/FEliminaAutors.fxml", "Eliminar Autors");
+    }
+    @FXML
+    public void BTEliminarLlibres() {
+        FGeneric("../llibres/FEliminaLlibres.fxml", "Eliminar Llibres");
+    }
+
 
     //</editor-fold>
 

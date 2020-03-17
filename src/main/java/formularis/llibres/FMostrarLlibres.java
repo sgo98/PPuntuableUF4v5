@@ -72,8 +72,8 @@ public class FMostrarLlibres {
             }
 
             TAPantalla.setText(TAPantalla.getText() +
-                    "\nTítol: " + l.getTitol() +
-                    "\nNúmero Pàgines: " + l.getNumeroPagines() +
+                    "\nTitol: " + l.getTitol() +
+                    "\nN Pagines: " + l.getNumeroPagines() +
                     "\nDimensions: " + l.getDimensions() +
                     "\nAutor/s: " + autors +
                     "\nColor Portada: " + l.getColorPortada() +

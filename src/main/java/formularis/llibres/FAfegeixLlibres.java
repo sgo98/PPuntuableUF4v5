@@ -17,7 +17,7 @@ import java.util.List;
 public class FAfegeixLlibres {
 
 
-    // <editor-fold defaultstate="collapsed" desc="Components FXML">
+    // <editor-fold defaultstate="collapsed" desc="">
     @FXML
     private AnchorPane FAfegeixLlibre;
     @FXML
@@ -93,6 +93,7 @@ public class FAfegeixLlibres {
         // DIMENSIONS:
         CBDimensio.setValue(LlistaDimensions.get(0));
         CBDimensio.setItems(LlistaDimensions);
+        TAAutors.setText("");       // buidem el text dels autors
         //
         // AUTORS:
         carregaComboAutors();

@@ -74,34 +74,6 @@ public class Autor implements Serializable {
 
     }
 
-    /**
-     * Cerca un nom d'autor dintre del fitxer
-     * retornarà el mateix objecte si el troba
-     * o un valor nul si no el troba
-     *
-     * @param nomAutor nom de l'autor a cercar
-     * @return objecte autor si el troba o null si no el troba
-     * @throws IOException            excepció d'entrada / sortida
-     * @throws ClassNotFoundException excepció de classe no trobada
-     */
-    public Autor cercarAutor(String nomAutor) throws IOException, ClassNotFoundException, InterruptedException {
-        // retorna un objecte autor si el troba
-        // en cas que no trobe res torna un null
-
-        List<Autor> LAutors = new ArrayList<Autor>();
-        int i = 0;
-
-        // llegim el fitxer d'autors
-        LAutors = retornaAutorsEnLlista();
-
-        do {
-            if (LAutors.get(i).nom.equals(nomAutor))
-                return LAutors.get(i);              // si l'autor existeix, retorna'l
-            i++;
-        } while (i < LAutors.size());
-
-        return null;                            // si no el trobem retorna null
-    }
 
     /**
      * Retorna autors en llista a partir de la lectura d'un fitxer
@@ -124,6 +96,29 @@ public class Autor implements Serializable {
             return LAutors;
         }
     }
+
+
+
+    public Autor cercarAutor(String nomAutor) throws IOException, ClassNotFoundException, InterruptedException {
+        // retorna un objecte autor si el troba
+        // en cas que no trobe res torna un null
+
+        List<Autor> LAutors = new ArrayList<Autor>();
+        int i = 0;
+
+        // llegim el fitxer d'autors
+        LAutors = retornaAutorsEnLlista();
+
+        do {
+            if (LAutors.get(i).nom.equals(nomAutor))
+                return LAutors.get(i);              // si l'autor existeix, retorna'l
+            i++;
+        } while (i < LAutors.size());
+
+        return null;                            // si no el trobem retorna null
+    }
+
+
 
     /**
      * Retorna el nom i cognom d'un autor a partir del seu idAutor
@@ -174,6 +169,21 @@ public class Autor implements Serializable {
         return id;
     }
 
+    /**
+     * Elimina un autor del fitxer d'autors
+     */
+    public void eliminaAutorFitxer() throws InterruptedException, ClassNotFoundException, NoSuchFieldException, IllegalAccessException, IOException {
+
+        // Variables necessàries
+
+        // Recollim totes les dades del fitxer en una llista
+
+        // Eliminem el fitxer, creant un temporal abans per si passa cap error (OPCIONAL allò del temporal)
+
+        // Guardem les dades de la llista al fitxer a excepció de l'autor que vull eliminar. (Recorrem la llista i tornem a escriure tots els components de la llista a excepció de l’autor que vull eliminar)
+
+        // borrem el temporal (OPCIONAL)
+    }
 
     //</editor-fold>
 
